@@ -96,12 +96,12 @@ const BLACKLIST = [
   // AGVE-HNY
   '0x50a4867aee9cafd6ddc84de3ce59df027cb29084'
 ]
-const MINIMUM_HOLDINGS = "100000000000000000" // 1 HNY
+const MINIMUM_HOLDINGS = "100000000000000000"
 
 console.log(`Fetching balances...`)
 fetchHolders(BLACKLIST, MINIMUM_HOLDINGS).then((holders) => {
   console.log(`Blacklisted addresses: ${BLACKLIST.length}`)
-  console.log(`Minimum holdings to be considered: ${100000000000000000 / Math.pow(10, 18)} HNY`)
+  console.log(`Minimum holdings to be considered: ${MINIMUM_HOLDINGS / Math.pow(10, 18)} HNY`)
   console.log(`Total holders: ${holders.length} (excluding blacklisted addresses)`)
 
   console.log(`Calculating gini...`)
